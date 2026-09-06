@@ -2,6 +2,8 @@
 
 T-SSA（Team Sanaru Super Athlete）の集客用・静的ホームページです。Next.jsで静的ファイルを出力し、Firebase Hostingで公開します。データベースやサーバー側の処理は使いません。
 
+AI協働者が変更を担当する場合は、[AI_SITE_OPERATION_GUIDE.md](AI_SITE_OPERATION_GUIDE.md) を最初に確認してください。
+
 ## ローカルで確認する
 
 ```bash

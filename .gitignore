@@ -2,6 +2,7 @@ node_modules/
 .next/
 out/
 .firebase/
+.DS_Store
 .env*
 !.env.example
 npm-debug.log*
