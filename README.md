@@ -2,7 +2,7 @@
 
 T-SSA（Team Sanaru Super Athlete）の集客用・静的ホームページです。Next.jsで静的ファイルを出力し、Firebase Hostingで公開します。データベースやサーバー側の処理は使いません。
 
-AI協働者が変更を担当する場合は、[AI_SITE_OPERATION_GUIDE.md](AI_SITE_OPERATION_GUIDE.md) を最初に確認してください。
+AI協働者が変更を担当する場合は、[AI_SITE_OPERATION_GUIDE.md](AI_SITE_OPERATION_GUIDE.md) を最初に確認してください。最初に渡すメッセージは、[AI_INITIAL_PROMPT.md](AI_INITIAL_PROMPT.md) をそのまま使えます。
 
 ## ローカルで確認する
 
@@ -13,13 +13,21 @@ npm run dev
 
 ブラウザで `http://localhost:3000` を開きます。
 
-## Firebaseに公開する
+## Firebaseに公開する（運営側のみ）
 
-Firebaseプロジェクトを作成した状態で、プロジェクトのルートで次を実行します。
+Firebaseへの公開は、GitHub上の変更内容を確認・承認した運営側だけが行います。AI協働者はFirebaseの認証情報を持たず、公開しません。
+
+運営側の環境でFirebaseへ未ログインの場合は、プロジェクトのルートで次を実行します。
 
 ```bash
 npx firebase login
-npx firebase use --add
+```
+
+公開前に `main` の変更内容を確認し、次を実行します。
+
+```bash
+npm run lint
+npm run build
 npm run deploy
 ```
 
